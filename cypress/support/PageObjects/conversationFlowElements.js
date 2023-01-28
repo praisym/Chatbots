@@ -54,35 +54,6 @@ export class conversationPage {
         return this;
     }
 
-    fillInInput(text) {
-        cy.getIframe()
-          .find('#chat_input')
-          .should('be.visible')
-          .type(text)
-          
-        return this;
-    }
-
-    sendMessage() {
-        cy.getIframe()
-          .find('[data-test="btn-send-message"]')
-          .should('be.enabled')
-          .click()
-          .wait(4000)
-
-        return this;
-    }
-
-    clickSuggestedOption(option) {
-        cy.getIframe()
-           .find('.message__suggested')
-           .contains(option)
-           .click()
-        
-        return this;
-
-    }
-
     verifyDateAndTime(text) {
         cy.getIframe()
          .find('[data-test="message-text"]')
@@ -100,4 +71,6 @@ export class conversationPage {
         
         return this;
     }
+
+
 }

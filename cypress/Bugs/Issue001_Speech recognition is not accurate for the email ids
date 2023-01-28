@@ -1,0 +1,30 @@
+Title: Issue001 Speech recognition is not accurate for email ids
+
+Issue: Mic is not capture the correct email ids
+
+Priority High
+Severity High
+
+Steps to reproduce:
+
+1) Navigate to the url - https://snatchbot.me
+2) Click on chatbot icon 
+3) Click on the text-to-speech buttons: Costs -> Not applicable -> Yes
+4) When the chatbot asks for email id 'Can you please tell me your 📧 email?'
+5) Click on the mic
+6) Say your email id in a valid format
+7) The chatbot doesn't recognize the `@` character and gives back a response as `👉 Please use standard email format, like this: jane.doe@email.com'
+
+Expected result:
+
+The chatbot should recognize the special characters and valid format of for email id delivered in speech.
+
+Actual result:
+
+The chatbot doesn't recognize the valid email format delivered through mic.
+
+Web Browser: Chrome 107
+
+Notes:
+
+This issue has been reproduced on multiple devices (including Windows and iPhone) and multiple browsers (including Firefox and Edge). Screenshots and videos of the issue can be found in the "screenshots and videos" folder.

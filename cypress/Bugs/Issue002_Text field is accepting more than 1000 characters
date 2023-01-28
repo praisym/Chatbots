@@ -1,9 +1,9 @@
-Title: Issue001 Speech recognition is not accurate for email ids
+Title: Issue002 Input field is accepting more than 1000 characters
 
-Issue: Mic is not capture the correct email ids
+Issue: Input field is accepting more than 1000 characters
 
 Priority High
-Severity High
+Severity Medium
 
 Steps to reproduce:
 

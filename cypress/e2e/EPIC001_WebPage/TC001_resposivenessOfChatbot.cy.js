@@ -6,6 +6,7 @@ describe('Verify the webpage loads successfully', () => {
 
     // Launch Webrowser to the URL
     beforeEach(() => {
+        cy.clearLocalStorage()
         cy.log('launch webrowser to the URL')
         cy.visit('/');
     })
