@@ -1,0 +1,172 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 2,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-01-29T01:06:03.093Z",
+    "end": "2023-01-29T01:07:56.394Z",
+    "duration": 113301,
+    "testsRegistered": 4,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "90f07fb3-6ccb-46f2-a5ad-016aa0a0e3a7",
+      "title": "",
+      "fullFile": "cypress/e2e/EPIC002_ConversationFlow/TC005-withSpeechRecognition.cy.js",
+      "file": "cypress/e2e/EPIC002_ConversationFlow/TC005-withSpeechRecognition.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e4a8e20a-dad4-4998-a8e6-39f8dc513a9d",
+          "title": "Verify the chatbot conversation with mic",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the mic is visible and clickable",
+              "fullTitle": "Verify the chatbot conversation with mic Verify the mic is visible and clickable",
+              "timedOut": null,
+              "duration": 6117,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const WebPage = new _webPageElements.webPage();\nWebPage.clickOnChatbot();\n(0, _buttons.checkButtonIsActive)('mic');\nWebPage.closeChatbot();",
+              "err": {},
+              "uuid": "da84d070-82e0-4333-bd32-cba69986a26a",
+              "parentUUID": "e4a8e20a-dad4-4998-a8e6-39f8dc513a9d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the mic is disabled when text-to-speech buttons are suggested",
+              "fullTitle": "Verify the chatbot conversation with mic Verify the mic is disabled when text-to-speech buttons are suggested",
+              "timedOut": null,
+              "duration": 8560,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const WebPage = new _webPageElements.webPage();\nWebPage.clickOnChatbot();\n(0, _inputs.fillInInputValue)('Ida');\n(0, _buttons.clickButtonByValue)('send');\n(0, _buttons.checkButtonIsVisible)('Yes');\n(0, _buttons.checkButtonIsDisabled)('mic');\nWebPage.closeChatbot();",
+              "err": {},
+              "uuid": "70a41a54-0fd7-4ade-a33b-769082c4be31",
+              "parentUUID": "e4a8e20a-dad4-4998-a8e6-39f8dc513a9d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the mic maximum allowance time",
+              "fullTitle": "Verify the chatbot conversation with mic Verify the mic maximum allowance time",
+              "timedOut": null,
+              "duration": 79516,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const WebPage = new _webPageElements.webPage();\nconst ConversationPage = new _conversationFlowElements.conversationPage();\nWebPage.clickOnChatbot();\n(0, _inputs.fillInInputValue)('Ida');\n(0, _buttons.clickButtonByValue)('send');\n(0, _buttons.clickButtonByValue)('Yes');\n(0, _buttons.clickButtonByValue)('mic');\ncy.wait(60000);\nConversationPage.verifyMessage(`recognize your message`, `Sorry, could not recognize your message, please try again.`);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'recognize your message' within the element: <div.message__body.ng-star-inserted> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'recognize your message' within the element: <div.message__body.ng-star-inserted> but never did.\n    at conversationPage.verifyMessage (webpack:///./cypress/support/PageObjects/conversationFlowElements.js:11:11)\n    at Context.eval (webpack:///./cypress/e2e/EPIC002_ConversationFlow/TC005-withSpeechRecognition.cy.js:53:13)",
+                "diff": null
+              },
+              "uuid": "4c2ef7f2-900d-459a-896b-e03b5e2e8802",
+              "parentUUID": "e4a8e20a-dad4-4998-a8e6-39f8dc513a9d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the response when there is no speech",
+              "fullTitle": "Verify the chatbot conversation with mic Verify the response when there is no speech",
+              "timedOut": null,
+              "duration": 19040,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const WebPage = new _webPageElements.webPage();\nconst ConversationPage = new _conversationFlowElements.conversationPage();\nWebPage.clickOnChatbot();\n(0, _inputs.fillInInputValue)('Ida');\n(0, _buttons.clickButtonByValue)('send');\n(0, _buttons.clickButtonByValue)('Yes');\n(0, _buttons.clickButtonByValue)('mic');\n(0, _buttons.clickButtonByValue)('mic', {\n  timeout: 3000\n});\nConversationPage.verifyMessage(`recognize your message`, `Sorry, could not recognize your message, please try again.`);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'mic' within the element: <button.mat-mini-fab.mat-button-base.mat-primary.ng-star-inserted> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'mic' within the element: <button.mat-mini-fab.mat-button-base.mat-primary.ng-star-inserted> but never did.\n    at clickButtonByValue (webpack:///./cypress/support/Helpers/buttons.js:14:7)\n    at Context.eval (webpack:///./cypress/e2e/EPIC002_ConversationFlow/TC005-withSpeechRecognition.cy.js:68:27)",
+                "diff": null
+              },
+              "uuid": "79fd5a50-dc33-4fb5-b24e-2f34dd131baa",
+              "parentUUID": "e4a8e20a-dad4-4998-a8e6-39f8dc513a9d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "da84d070-82e0-4333-bd32-cba69986a26a",
+            "70a41a54-0fd7-4ade-a33b-769082c4be31"
+          ],
+          "failures": [
+            "4c2ef7f2-900d-459a-896b-e03b5e2e8802",
+            "79fd5a50-dc33-4fb5-b24e-2f34dd131baa"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 113233,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

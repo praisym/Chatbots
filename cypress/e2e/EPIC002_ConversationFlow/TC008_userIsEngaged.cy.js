@@ -5,9 +5,9 @@ describe('Verify the chatbot keeps the user engaged',() => {
         cy.visit('/')
     })
 
-    it('Verify if the chatbot responses when the user is idle', () => {
+    // it('Verify the response time for each customer requests ', () => {
         
-    })
+    // })
 
 
 })

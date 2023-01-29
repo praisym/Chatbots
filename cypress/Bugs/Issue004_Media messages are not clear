@@ -1,0 +1,27 @@
+Title: Issue004 Media messages are blurry
+
+Issue: Media messages are not clear and cannot maximize.
+
+Priority High
+Severity High
+
+Steps to reproduce:
+
+1) Navigate to the url - https://snatchbot.me
+2) Click on chatbot icon 
+3) Continue chatting with the bot using Broadcast option from menu bar.
+4) The image received from bot is blurry and cannot maximize.
+
+Expected result:
+
+The chatbot should have rich media messages.
+
+Actual result:
+
+The chatbot media messages are blurry.
+
+Web Browser: Chrome 107
+
+Notes:
+
+This issue has been reproduced on multiple devices (including Windows and iPhone) and multiple browsers (including Firefox and Edge). Screenshots and videos of the issue can be found in the "screenshots and videos" folder.

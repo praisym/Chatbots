@@ -1,0 +1,27 @@
+Title: Issue003 Few of the register redirections in chatbot are dead links
+
+Issue: Registeration Links gives 404 error
+
+Priority High
+Severity High
+
+Steps to reproduce:
+
+1) Navigate to the url - https://snatchbot.me
+2) Click on chatbot icon 
+3) Continue chatting with the bot using Feature buttons. Features -> feature1 -> feature2.... -> Feature7 -> More
+4) The register link in `Even better, register and try them for yourself, for free!` message is not valid and gives 404 error.
+
+Expected result:
+
+The chatbot registration link should navigate to a valid url.
+
+Actual result:
+
+The chatbot registration link is not navigating to a valid url.
+
+Web Browser: Chrome 107
+
+Notes:
+
+This issue has been reproduced on multiple devices (including Windows and iPhone) and multiple browsers (including Firefox and Edge). Screenshots and videos of the issue can be found in the "screenshots and videos" folder.
