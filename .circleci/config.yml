@@ -1,9 +1,9 @@
 ####################### DEMONSTRATION OF INTEGRATION WITH CI PROVIDER WITH SAMPLE PARAMETERS ###########################
 # Integration with CircleCI
 #   1. Login to CI provide with Github
-#   2. Select the repository where project source code exist.
+#   2. Select the repository where project source code exists.
 #   3. Set up the config.yml file
-#   4. Below are a few of the parameter used to run the tests in CI
+#   4. Below are a few of the parameters used to run the tests in CI
 
 version: 2.1
 orbs:
